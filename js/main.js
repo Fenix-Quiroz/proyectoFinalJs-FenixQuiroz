@@ -29,7 +29,7 @@ const products =[
     {id: 15 ,tipo:"vittoria", name:"Vino Vittoria Chardonnay" , img:"img/producto-vittoria6.png" , price:"$40"},
 
     //vinos generosos
-    {id: 16 ,tipo:"generosos", name:"Vino El Fraile Oporto Tabernero" , img:"/img/producto-generoso1.png" , price:"$40"},
+    {id: 16 ,tipo:"generosos", name:"Vino El Fraile Oporto Tabernero" , img:"img/producto-generoso1.png" , price:"$40"},
 ]
 
 
