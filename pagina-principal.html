@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="root">
+      <header class="header-main">
+        <div class="header-main__logo">
+          <a href="pagina-principal.html">
+            <img src="./img/logo.png" alt="Logo." />
+          </a>
+        </div>
+        <div class="header-main__items">
+          <div class="search">
+            <div class="search__icon">
+              <img src="./img/icon-buscar.png" alt="Icono de buscar." />
+            </div>
+            <input
+              class="search__fetch"
+              type="text"
+              placeholder="Ingresa un nombre..."
+            />
+            
+          </div>
+          <div class="profile">
+            <img class="profile__icon" src="./img/logo-perfil.png.png" alt="" />
+          </div>
+          <div class="cart">
+            <p class="cart__amount">0</p>
+            <a href="carrito-compras.html"
+              ><img
+                class="cart__icon"
+                src="./img/icon-cart.svg"
+                alt="Icon cart."
+            /></a>
+          </div>
+        </div>
+      </header>
+      <main class="main-home">
+        <section class="filter">
+          <p class="filter__title">tipos de vinos:</p>
+          <div class="filter__info">
+            <div class="filter__dates">
+              <input
+                class="filter__date"
+                type="checkbox"
+                name="semisecos"
+                id="semisecos"
+                value="semiseco"
+              />
+              <label class="filter__item" for="vinos-semisecos" id="semisecos"
+                >Vinos Semisecos</label
+              >
+            </div>
+            <div class="filter__dates">
+              <input
+                class="filter__date"
+                type="checkbox"
+                name="seco"
+                id="secos"
+                value="seco"
+              />
+              <label class="filter__item" for="vinos-secos" id="secos"
+                >Vinos Secos</label
+              >
+            </div>
+            <div class="filter__dates">
+              <input
+                class="filter__date"
+                type="checkbox"
+                name="vittoria"
+                id="vittoria"
+                value="vittoria"
+              />
+              <label class="filter__item" for="vinos-vittoria" id="vittoria">
+                Vinos Vittoria</label
+              >
+            </div>
+            <div class="filter__dates">
+              <input
+                class="filter__date"
+                type="checkbox"
+                name="generosos"
+                value="generosos"
+                id="generosos"
+              />
+              <label
+                class="filter__item"
+                for="vinos-generosos"
+                id="generosos"
+                value="generosos"
+                >Vinos Generosos</label
+              >
+            </div>
+          </div>
+        </section>
+        <h1 class="products__title">vinos más buscados</h1>
+        <section class="products">
+          <!--contenido JS-->
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="content">pfooter</div>
+      </footer>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <!--Libreria de alertas-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Carrito de compras</title>
+  </head>
+  <body>
+    <div class="root">
+      <header class="header-cart">
+        <div class="btn-return">
+          <div class="btn-return__icon">
+            <img src="./img/icon-previous.svg" alt="Icon previous" />
+          </div>
+
+          <a href="pagina-principal.html">
+            <button class="btn-return__previous" id="previous">
+              Volver al inicio
+            </button>
+          </a>
+        </div>
+        <h1 class="header-cart__title">Carrito de compras</h1>
+      </header>
+      <main class="main-cart">
+        <div class="card-cart">
+          <div class="card-cart__img">
+            <img src="./img/producto-seco2.png" alt="Imagen de un vino." />
+          </div>
+          <div class="card-cart__info">
+            <img
+              class="card-cart__delete"
+              src="./img/icon-delete.svg"
+              alt="Icon delete"
+            />
+            <p class="card-cart__name">Vino Gran Tinto Cabernet Sauvignon</p>
+            <div class="card-cart__items">
+              <p class="card-cart__item">Precio:</p>
+              <p class="card-cart__item">Cantidad:</p>
+              <p class="card-cart__item">Total:</p>
+            </div>
+            <div class="card-cart__dates">
+              <p class="card-cart__price">$100</p>
+              <div class="card-cart__quantity-products">
+                <img
+                  class="card-cart__minus"
+                  src="./img/icon-minus.svg"
+                  alt="Icon minus."
+                />
+
+                <input
+                  class="card-cart__quantity"
+                  type="number"
+                  id="quantity-products"
+                  value="0"
+                />
+
+                <img
+                  class="card-cart__plus"
+                  src="./img/icon-plus.svg"
+                  alt="Icon plus."
+                />
+              </div>
+
+              <p  class="card-cart__total">$300</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-confirm">
+          <div class="card-confirm__dates">
+            <div class="card-confirm__items">
+              <p class="card-confirm__item">Subtotal:</p>
+              <p  id="subtotal" class="card-confirm--item">$100</p>
+            </div>
+
+            <div class="card-confirm__items">
+              <p class="card-confirm__item">Total:</p>
+              <p id="total" class="card-confirm--item">$100</p>
+            </div>
+
+            <button
+              class="card-confirm__btn card-prod__btn"
+              id="card-confirm__btn"
+            >
+              Comprar
+            </button>
+          </div>
+        </div>
+        <div class="cart__modal">
+          <form class="cart__form" action="" id="cart__modal">
+            <div class="cart-form__data">
+              <div class="cart-form__items">
+                <label for="cardNumber" id="cardNumber"
+                  >Numero de la tajeta:</label
+                >
+                <input class="cart-form__item" type="number" id="cardNumber" />
+              </div>
+              <div class="cart-form__items">
+                <label for="cardHolder" id="cardHolder"
+                  >Titular de la tarjeta:</label
+                >
+                <input class="cart-form__item" type="text" id="cardHolder" />
+              </div>
+              <div class="cart-form--items">
+               
+                <div class="cart-form__selects">
+                  <label for="expirationDate" id="expirationDate"
+                  >Fecha de expiracion:</label
+                >
+                  <select class="cart-form__item" name="months" id="onths">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                  <select
+                    class="cart-form__item"
+                    name="years"
+                    id="years"
+                    value="2023"
+                  >
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                  </select>
+                </div>
+                <div class="cart-form__items">
+                  <label for="ccv" id="ccv">ccv</label>
+                  <input
+                    class="cart-form__item"
+                    type="number"
+                    name="ccv"
+                    id="ccv"
+                  />
+                </div>
+              </div>
+            </div>
+            <button class="cart-form__btn reg-log__btn" id="cart-form__btn">Pagar</button>
+          </form>
+        </div>
+      </main>
+      <footer class="footer"></footer>
+    </div>
+  
+    <script src="./js/carrito.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js"></script>
+  </body>
+</html>

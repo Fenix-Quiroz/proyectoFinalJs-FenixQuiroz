@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="root">
+      <header class="header">
+        <div class="header__logo">
+          <img src="./img/logo.png" alt="Logo." />
+        </div>
+        <h1 class="header__title">
+          Inicie seción o registrese para acceder a la página.
+        </h1>
+      </header>
+      <main class="main-reg-log">
+        <div class="reg-log">
+          <div class="reg-log__carousel">
+            <div class="reg-log__img">
+              <img id="1" src="./img/img-carrusel.png" alt="Fondo de vinos." />
+            </div>
+            <!--<img class="reg-log__img" id="2" src="./img/img-carrusel2.png" alt="Fondo de vinos.">
+                <img class="reg-log__img" id="3" src="./img/img-carrusel3.png" alt="Fondo de vinos.">
+            <div class="reg-log__previous">
+              <img src="./img/icon-previous.svg" alt="Icon previous." />
+
+              <div class="reg-log__next">
+                <img src="./img/icon-next.svg" alt="Icon next." />
+              </div>-->
+          </div>
+          <div class="reg-log__form">
+            <form class="form-reg" action="" id="form-reg">
+              <label class="form-reg__date" for="name" id="name">Nombre:</label>
+              <input
+                class="form-reg__info"
+                type="text"
+                id="name-usuario"
+                placeholder="Ingrese su nombre."
+              />
+              <label class="form-reg__date" for="password" id="password"
+                >Contraseña:</label
+              >
+              <input
+                class="form-reg__info"
+                type="password"
+                id="usser-password"
+                placeholder="Ingrese su contraseña."
+              />
+            </form>
+            <p class="reg-log__error" id="reg-log__error"></p>
+            <div class="reg-log__bottons">
+                <button class="reg-log__btn" id="btn-login" value="login">
+                    Ingresar
+                  </button>
+                  <button class="reg-log__btn" id="btn-reg" value="check-in">
+                    Registrarse
+                  </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!--JS-->
+    <script src="./js/main.js"></script>
+    <script src="./js/loginRegistro.js"></script>
+  </body>
+</html>
