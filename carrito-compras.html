@@ -24,16 +24,23 @@
         <h1 class="header-cart__title">Carrito de compras</h1>
       </header>
       <main class="main-cart">
-        <div class="card-confirm">
+        <div id="cart-empty" class="cart-empty">
+          <p class="cart-empty__title">Tu carrito esta vacio</p>
+        </div>
+        <section id="cards-cart" class="main__cards disabled">
+          <!--Contenido agregado del JS-->
+        </section>
+
+        <div id="card-confirm" class="card-confirm disabled">
           <div class="card-confirm__dates">
             <div class="card-confirm__items">
               <p class="card-confirm__item">Subtotal:</p>
-              <p  id="subtotal" class="card-confirm--item">$100</p>
+              <p id="price-subtotal" class="card-confirm--item"></p>
             </div>
 
             <div class="card-confirm__items">
               <p class="card-confirm__item">Total:</p>
-              <p id="total" class="card-confirm--item">$100</p>
+              <p id="price-total-confirm" class="card-confirm--item"></p>
             </div>
 
             <button
@@ -45,26 +52,33 @@
           </div>
         </div>
         <div class="cart__modal">
+          <div class="cart-modal__volver btn-return">
+            <div class="cart-modal__return btn-return__icon">
+              <img src="./img/icon-previous.svg" alt="Icon previous" />
+            </div>
+            <button class="cart-modal__btn-volver btn-return__previous">
+              Volver
+            </button>
+          </div>
           <form class="cart__form" action="" id="cart__modal">
             <div class="cart-form__data">
               <div class="cart-form__items">
-                <label for="cardNumber" id="cardNumber"
+                <label for="cardNumber" name="cardNumber"
                   >Numero de la tajeta:</label
                 >
                 <input class="cart-form__item" type="number" id="cardNumber" />
               </div>
               <div class="cart-form__items">
-                <label for="cardHolder" id="cardHolder"
+                <label for="cardHolder" name="cardHolder"
                   >Titular de la tarjeta:</label
                 >
                 <input class="cart-form__item" type="text" id="cardHolder" />
               </div>
               <div class="cart-form--items">
-               
                 <div class="cart-form__selects">
                   <label for="expirationDate" id="expirationDate"
-                  >Fecha de expiracion:</label
-                >
+                    >Fecha de expiracion:</label
+                  >
                   <select class="cart-form__item" name="months" id="onths">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -94,7 +108,7 @@
                   </select>
                 </div>
                 <div class="cart-form__items">
-                  <label for="ccv" id="ccv">ccv</label>
+                  <label for="ccv" id="name">ccv</label>
                   <input
                     class="cart-form__item"
                     type="number"
@@ -104,14 +118,22 @@
                 </div>
               </div>
             </div>
-            <button class="cart-form__btn reg-log__btn" id="cart-form__btn">Pagar</button>
+            <button
+              class="cart-form__btn reg-log__btn"
+              id="cart-form__btn"
+              type="button"
+            >
+              Pagar
+            </button>
+            <p class="modal-error"></p>
           </form>
         </div>
       </main>
       <footer class="footer"></footer>
     </div>
-  
-    <script src="./js/carrito.js"></script>
+    <!--Libreria sweet alert-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js"></script>
+
+    <script src="./js/carrito.js"></script>
   </body>
 </html>

@@ -25,6 +25,7 @@ img {
   padding: 0 30px;
   background-color: var(--bg-text-color);
   padding-bottom: 30px;
+  
   height: 100%;
   position: relative;
 }
@@ -336,6 +337,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 /* Fin de la pagina principal */
 /* Carrito de compras */
+
 .header-cart {
   background-color: var(--primary-color);
   display: flex;
@@ -378,6 +380,23 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   justify-content: space-between;
   margin-top: 60px;
+  
+  
+}
+
+.cart-empty__title{
+  display: flex;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin-left: 27rem;
+}
+
+.main__cards{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+
 }
 .card-cart {
   display: flex;
@@ -456,22 +475,28 @@ input[type="number"]::-webkit-outer-spin-button {
   cursor: pointer;
 }
 .card-confirm {
-  width: 100%;
-  margin-left: 100px;
+  display: block;
+  width: 300px;
+  height: 100%;
   background-color: var(--primary-color);
   border-radius: 20px;
 }
+.disabled{
+  display: none;
+}
 .card-confirm__dates {
   background-color: var(--bg-text-color);
-  margin: 30px;
+  margin: 15px;
   border-radius: 20px;
   font-size: 1.6em;
+  padding: 0 5px;
   padding-bottom: 40px;
+  
 }
 .card-confirm__items {
   display: flex;
   justify-content: space-around;
-  padding-top: 60px;
+  padding-top: 40px;
 }
 .card-confirm--item {
   color: var(--primary-color);
@@ -492,11 +517,29 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 100%;
   display: none;
 }
+.cart-modal__volver{
+  margin-left: 40px;
+  margin-top: 30px;
+  padding: 5px 50px;  
+
+} 
+.cart-modal__return{
+  left: 65px;
+  top: 13px;
+}
+.cart-modal__btn-volver{
+  background-color: var(--primary-color);
+  color: var(--bg-text-color);
+}
+.modal-error{
+  text-align: center;
+  padding-top: 10px;
+}
 .cart__form {
   background-color: var(--primary-color);
   margin: auto;
   width: 400px;
-  margin-top: 80px;
+  margin-top: 30px;
   padding: 20px 40px;
   font-size: 1.3em;
   color: var(--bg-text-color);

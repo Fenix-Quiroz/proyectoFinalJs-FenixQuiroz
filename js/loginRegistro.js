@@ -4,7 +4,6 @@ let pass = document.getElementById("usser-password");
 let btnLog = document.getElementById("btn-login");
 let btnReg = document.getElementById("btn-reg");
 let txtConfirmError = document.getElementById("reg-log__error");
-
 //registro
 let users;
 if (localStorage.getItem("users")) {
@@ -38,7 +37,7 @@ btnReg.addEventListener("click", () => {
   saveLs(users);
   if (userName.value != "" && pass.value != "") {
     txtConfirmError.innerText =
-      "Usuario registrado haz 'CLICK' EN 'Ingresar' para acceder.";
+      "Usuario registrado haz 'CLICK' en 'Ingresar' para acceder.";
     txtConfirmError.style = "color: green;";
   } else {
     txtConfirmError.innerText = "Ingrese sus datos para poder registrarse";
