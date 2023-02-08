@@ -177,6 +177,7 @@ payBtn.addEventListener("click", () => {
       showConfirmButton: false,
       timer: 1500,
     });
+    
     localStorage.clear("productos en carrito", JSON.stringify(productsCartLs));
     productsCartLs = [];
     cartEmpty2();

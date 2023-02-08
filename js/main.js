@@ -5,6 +5,9 @@ const container = document.querySelector(".products");
 const chekboxsFilter = document.querySelectorAll('input[type="checkbox"]');
 let btnCart = document.querySelectorAll(".card-prod__btn");
 let cartNotification = document.querySelector(".cart__amount");
+let profileName= document.querySelector('.profile__name')
+
+
 
 // fetch (trear datos de un JSON)
 fetch("./data/data.json")
@@ -39,6 +42,11 @@ fetch("./data/data.json")
       updateButtonsCard();
     }
 
+
+    // insertar en nombre del usuario 
+    const ususarioLs  = JSON.parse(localStorage.getItem('users'));
+    const nameUser = ususarioLs[0].userName
+    profileName.innerText = nameUser
     // botones "agregar al acrrito"
     function updateButtonsCard() {
       btnCart = document.querySelectorAll(".card-prod__btn");
@@ -100,14 +108,14 @@ fetch("./data/data.json")
     // filtro buscar
     function filterProducts(filter) {
       let filteredOut = data.filter((el) => {
-        return el.name.includes(filter);
+        return el.name.toLowerCase().includes(filter);
 
       });
       return filteredOut;
     }
     // buscador
     search.addEventListener("input", () => {
-      let filter = filterProducts(search.value);
+      let filter = filterProducts(search.value.toLowerCase());
       createHtml(filter);
     });
 

@@ -203,6 +203,15 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 60px;
   margin-top: 8px;
   cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-right: 90px;
+}
+.profile__name{
+  text-transform: uppercase;
+  font-size:  1.2em;
+  color: var(--bg-text-color);
 }
 .cart {
   display: flex;
