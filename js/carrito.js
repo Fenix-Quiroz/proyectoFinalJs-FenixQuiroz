@@ -178,10 +178,11 @@ payBtn.addEventListener("click", () => {
       timer: 1500,
     });
     
-    localStorage.clear("productos en carrito", JSON.stringify(productsCartLs));
+    localStorage.removeItem("productos en carrito", JSON.stringify(productsCartLs));
     productsCartLs = [];
     cartEmpty2();
   } else {
     modalError.innerText = "Ingrese sus datos para poder comprar.";
+    modalError.style= "color: red;"
   }
 });

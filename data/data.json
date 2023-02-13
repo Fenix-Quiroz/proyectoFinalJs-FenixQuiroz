@@ -32,7 +32,7 @@
        "tipo":"semiseco",
        "name":"Vino Tabernero Tinto País",
        "img":"img/producto-semiseco5.jpg",
-       "price":"$40"
+       "price":"40"
     },
     {
        "id":6,
@@ -60,7 +60,7 @@
        "tipo":"seco",
        "name":"Vino Gran Blanco Fina Reserva",
        "img":"img/producto-seco3.png",
-       "precio":"40"
+       "price":"40"
     },
     {
        "id":10,
